@@ -1,0 +1,485 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Focus Beamer Presentation - LaTeX Template - Version 1.0 (8/8/18)
+% GNU GPL v3.0 - Downloaded from http://www.LaTeXTemplates.com
+% Author: P. Africa (https://github.com/elauksap/focus-beamertheme) with modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Humanity has reached a point where the technology capacity to produce data has long surpassed our means to meaningfully analyze them. In contrast, data have become more complex, which makes their analysis a challenging task. Nowadays, we are at the dawn of a new era when all human activities will be assisted and guided by smart data processing. Technologies for processing complex data have tremendous potential to improve the quality of life in emerging societies. Such technologies
+%are in high demand to tackle the most urgent needs in the Brazilian society. Better and cheaper networking technology are needed for ubiquitous and low-cost education, including people living in remote sites. Improving data modelling and prediction will help us to optimize the generation of environment-friendly energy with solar and wind farms. Monitoring large areas through high-quality image processing will feed smarter models to understand and possibly act on the effects of climate
+%change. For improving large urban sprawls, high performance data processing systems and efficient drone imaging can be employed for monitoring traffic congestion; help public security; and imaging poorly maintained neighborhoods to detection of Aedes aegypt-prone regions. All these opportunities need new algorithms and techniques to ensure the quality of the knowledge extracted from the huge amount of non-structured, noisy, non-stationary, and highly interconnected data. In this talk I
+%will discuss the opportunities that this new era brings and how multi-national researchers can team up to share expertise and align efforts.
+
+
+
+
+\documentclass{beamer}
+\usetheme{focus} % Use the Focus theme supplied with the template
+% Add option [numbering=none] to disable the footer progress bar
+% Add option [numbering=fullbar] to show the footer progress bar as always full with a slide count
+% Uncomment to enable the ice-blue theme
+%\definecolor{main}{RGB}{92, 138, 168}
+%\definecolor{background}{RGB}{240, 247, 255}
+\usepackage{booktabs} % Required for better table rules
+\usepackage{hyperref}
+
+\title{Developing new smart data\\processing techniques}
+\subtitle{Challenges and opportunities}
+
+\author{Prof. Marcelo Keese Albertini, Ph.D.}
+\institute{School of Computer Science\\ Federal University of Uberlandia, Brazil}
+\titlegraphic{\includegraphics[scale=.2]{Images/ufu.pdf}} % Optional title page image, comment this line to remove it
+\date{Jul/Aug 2019}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle % Automatically created using the information in the commands above
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{About us} % Section title slide, unnumbered
+%------------------------------------------------
+{ % all template changes are local to this group.
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+\node[at=(current page.center)] {
+\includegraphics[%keepaspectratio,
+width=\paperwidth,
+height=\paperheight]{Images/brazil.pdf}
+};
+\end{tikzpicture}
+\end{frame}
+}
+
+\begin{frame}\frametitle{About Brazil}
+  \begin{itemize}
+    \item $9$th largest world economy in GDP 
+    \item Economy: agriculture-related industries, petrochemical complex, mining, machinery, avionics, medicine, public health, bioinformatics, energy, and services
+    \item Many sectors are technologically mature
+\centering
+  \begin{tabular}{cc}
+    \includegraphics[scale=.1]{Images/amx.pdf} & \includegraphics[scale=.9]{Images/plataforma.pdf}
+  \end{tabular}
+    \item Challenges persist due to highly diverse and complex society 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Federal University of Uberlândia (UFU)}
+  \begin{itemize}
+    \item Located in Uberlândia, State of Minas Gerais
+    \item Tuition-free and high-quality institution funded by the Federal Government
+    \item UFU has $2000$ professors and $25000$ students
+    \item UFU offers $72$ undergraduates courses, $30$ masters of science courses, and $20$ Ph.D. programmes
+    \item \href{http://www.ufu.br}{www.ufu.br}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{School of Computer Science (UFU)}
+  \begin{itemize}
+    \item $1324$ students, $70$ professors and researchers
+    \item $3$ undergraduate courses
+    \item M.Sc. and Ph.D. programmes
+    \item \href{http://www.portal.facom.ufu.br/en}{www.facom.ufu.br}
+  \end{itemize}
+\end{frame}
+
+\section{Challenges and opportunities}
+
+\begin{frame}\frametitle{Current Context}
+  \begin{itemize}
+    \item Governmental data are widely available
+    \item Low-cost devices are becoming more available
+    \item Advanced pattern recognition techniques are available
+    \item Society challenges need solutions
+  \end{itemize}
+  \begin{alertblock}{Need}
+To develop low-cost and effective solutions to current challenges of our society
+  \end{alertblock}
+\end{frame}
+
+
+\begin{frame}\frametitle{Case: \textit{Aedes aegypt} mosquitos}
+
+  \begin{alertblock}{\textit{Aedes aegypti} spread diseases}
+\textit{Aedes aegypti} population grows in wet containers.
+  \end{alertblock}
+
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[scale=.75]{Images/aedes.pdf}& \includegraphics[scale=.3]{Images/microcefalia.pdf}\\
+    \textit{Aedes aegypti} & microcephaly 
+  \end{tabular}
+\end{frame}
+
+\begin{frame}\frametitle{Case: \textit{Aedes aegypt} mosquitos}
+
+  \begin{block}{Challenge}
+People leave containers with standing water exposed which is ideal to mosquitos breed.
+We need to quickly identify places where standing water can be available to mosquitos.
+  \end{block}
+
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item To develop techniques to detect small wet containers and places prone to standing water. 
+      \item To analyse data of old outbreaks to detect new areas of infestation
+    \end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+
+
+
+\begin{frame}\frametitle{Case: Government data}
+
+  \begin{alertblock}{Government data is public by force of transparency laws}
+Large amounts of records produced by government agencies are accessible 
+  \end{alertblock}
+
+  \centering
+  \href{http://www.dados.gov.br}{www.dados.gov.br}
+
+  \includegraphics[scale=.8]{Images/portalDados.pdf}
+
+\end{frame}
+
+\begin{frame}\frametitle{Case: Government data}
+  \begin{block}{Challenge}
+Provide efficient core technology to off-the-shelf computers to enable exploration of large amount of data
+  \end{block}
+
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item Research on specialized types of information retrieval
+      \item Produce new specialized algorithms to rank relevant semi-structured data
+      \item Research query languages to complex data
+    \end{itemize}
+	\end{exampleblock}
+  \begin{alertblock}{Ongoing work}
+    \begin{itemize}
+      \item Optimization problem to learn to rank documents and entities 
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+
+\begin{frame}\frametitle{Case: Network visualization}
+
+  \begin{alertblock}{Network data exploration}
+As data complexity increases, it becomes natural to use time-aware network/graph representations
+  \end{alertblock}
+
+  \centering
+  \includegraphics[width=\textwidth]{Images/timeGraph.pdf}
+
+\end{frame}
+
+\begin{frame}\frametitle{Case: Network visualization}
+
+  \begin{block}{Challenge}
+Provide efficient core technology to off-the-shelf computers visualize and explore time graphs
+  \end{block}
+
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item To develop new data structures
+      \item Research new operations to unveil information from graphs 
+    \end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}\frametitle{Case: Network visualization}
+  \begin{alertblock}{Ongoing work}
+    \begin{itemize}
+      \item Design of space-time efficient data structure for time graphs to minimize usage of secondary memory
+    \end{itemize}
+  \end{alertblock}
+
+  https://bitbucket.org/luizufu/graph-indexer\\
+  \textit{DyNetVis: A System for Visualization of Dynamic Networks. In: Symposium on Applied Computing - SAC 2017, 2017}
+
+\end{frame}
+
+
+
+\begin{frame}\frametitle{Case: plant recognition}
+
+\begin{alertblock}{Many plants and little knowledge}
+There are similar plants which are edible and poisonous.
+Better understanding and classification of plants in forests.
+\end{alertblock}
+
+\centering
+  \includegraphics{Images/folhas.pdf}
+\end{frame}
+
+\begin{frame}\frametitle{Case: plant recognition}
+
+  \begin{block}{Challenge}
+People leave containers with standing water exposed which is ideal to mosquitos breed.
+We need to quickly identify places where standing water can be available to mosquitos.
+  \end{block}
+
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item To learn and charaterize a plant by shape and texture of its leaf
+      \item Creation of a digital herbarium
+    \end{itemize}
+	\end{exampleblock}
+
+  https://doi.org/10.1016/j.neucom.2018.05.099
+\end{frame}
+
+
+\begin{frame}\frametitle{Case: Remote sensoring}
+  \begin{alertblock}{Remote sensoring}
+Rich source of information about the terrestrial surface, wide coverage and low cost through usage of Unmanned Aerial Vehicles
+  \end{alertblock}
+
+
+\centering  \includegraphics[scale=.25]{Images/remoteSensoring.pdf}
+\end{frame}
+
+\begin{frame}\frametitle{Case: Remote sensoring}
+
+  \begin{block}{Challenge}
+Images are the result of complex interactions among different elements of a city (road system, blocks, lots, and buildings)
+  \end{block}
+
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item Identification of irregular land invasion
+      \item Relation between the image texture and the socioeconomic data of the analyzed regions
+    \end{itemize}
+	\end{exampleblock}
+
+  http://dx.doi.org/10.1007/s11045-018-0600-6
+\end{frame}
+
+
+\begin{frame}\frametitle{Case: Coffee crops}
+  \begin{alertblock}{Farming needs to be optimized}
+Brazil is the world’s largest producer of coffee. Exportation generated revenue of U\$20 billions in 2016.
+  \end{alertblock}
+
+  \centering
+  \includegraphics[scale=.5]{Images/plantacao.pdf}\\
+  \textit{Analysis of Nematodes in Coffee Crops at Different Altitudes Using Aerial Images. In: 27th European Signal Processing Conference (EUSIPCO), 2019}
+\end{frame}
+
+\begin{frame}\frametitle{Case: Coffee crops}
+  \begin{block}{Challenge}
+Detect coffee fruits from aerial images, detect weeds, and predict harvest
+  \end{block}
+\centering
+  \begin{tabular}{cc}
+    \includegraphics[scale=.55]{Images/droneCafe.pdf} &     \includegraphics[scale=.35]{Images/solucaoCafe.pdf} 
+  \end{tabular}
+\end{frame}
+
+\begin{frame}\frametitle{Case: Coffee crops}
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item Optimize fly plan through coffee corridors
+      \item To identify lines of plantation 
+      \item Evaluate quality 
+      \item Forecast harvest more precisely
+    \end{itemize}
+	\end{exampleblock}
+
+  \begin{alertblock}{Ongoing work}
+    Data collection and usage of Machine Learning -- neural networks preduced best results
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}\frametitle{Case: Eucalyptus crops}
+  \begin{alertblock}{Eucalyptus are economically important}
+Eucalyptus provides paper, wood, and charcoal.
+  \end{alertblock}
+
+  \centering
+    \includegraphics[scale=.5]{Images/eucalipto.pdf} 
+\end{frame}
+
+\begin{frame}\frametitle{Case: Eucalyptus crops}
+  \begin{block}{Challenge}
+Counting trees and identifying sick trees. 
+  \end{block}
+
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item Pattern recognition problem extendable to similar crops
+    \end{itemize}
+	\end{exampleblock}
+  \centering
+ \includegraphics[scale=.85]{Images/sickEucaliptus.pdf}
+\end{frame}
+
+\begin{frame}\frametitle{Case: Eucalyptus crops}
+	\begin{alertblock}{Ongoing work}
+  Extensive work on feature extraction and usage of Machine Learning methods 
+	\end{alertblock}
+
+  \centering
+    \includegraphics[scale=.35]{Images/countingTrees.pdf}  
+    http://dx.doi.org/10.1109/lgrs.2018.2819944
+\end{frame}
+
+
+\begin{frame}\frametitle{Case: Motion capture systems}
+  \begin{alertblock}{Optical systems are expensive}
+High precision systems are very expensive due to specialized hardware and software
+  \end{alertblock}
+
+  \centering
+    \includegraphics[scale=.4]{Images/motionCapture.pdf}  
+
+    http://dx.doi.org/10.1590/2446-4740.04317
+\end{frame}
+
+\begin{frame}\frametitle{Case: Motion capture systems}
+  \begin{block}{Challenge}
+Develop high precision and real-time systems using low-cost cameras such as those available on smartphones
+  \end{block}
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item Algorithms to calibrate, track and reconstruct the 3D coordinates of reflective markers 
+    \end{itemize}
+	\end{exampleblock}
+  \centering
+    \includegraphics[scale=.8]{Images/motionCapture2.pdf} 
+
+\end{frame}
+
+
+\begin{frame}\frametitle{Case: bull fertility}
+ \begin{alertblock}{Cattle raising}
+Modernization is vital to ensure productivity
+ \end{alertblock}
+ \centering
+ \includegraphics{Images/espermatozoides.pdf}
+ http://dx.doi.org/10.1016/j.repbio.2018.04.001
+\end{frame}
+
+\begin{frame}\frametitle{Case: bull fertility}
+ \begin{block}{Challenge}
+Improve genetic quality
+ \end{block}
+
+\begin{exampleblock}{Opportunities}
+     To produce a classifier of high quality sperm
+\end{exampleblock}
+ \begin{alertblock}{Cattle raising}
+Modernization is vital to ensure productivity
+ \end{alertblock}
+\end{frame}
+
+
+\begin{frame}\frametitle{Case: Breast Cancer Detection}
+  \begin{alertblock}{Breast cancer is the main type of cancer to kill women}
+    Mammography offers an approximate diagnosis of cancer and may also detect some other lesions
+  \end{alertblock}
+\centering
+  \begin{tabular}{ccc}
+  \includegraphics[scale=.15]{Images/breast.pdf} $  \includegraphics[scale=.15]{Images/breast1.pdf} $ \includegraphics[scale=.15]{Images/breast2.pdf}\\
+  \end{tabular}
+  http://dx.doi.org/10.1016/j.cmpb.2019.02.004
+\end{frame}
+
+\begin{frame}\frametitle{Case: Breast Cancer Detection}
+  \begin{block}{Challenge}
+Ensure high quality of cancer pre-screening detection in possibly highly diverse context with low-cost equipment 
+  \end{block}
+
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item To employ convolutional neural network technologies to facilitate pre-screen exams 
+    \end{itemize}
+	\end{exampleblock}
+
+  \begin{alertblock}{Ongoing work}
+Applying convolutional neural networks to classify images
+  \end{alertblock}
+
+\end{frame}
+
+
+\begin{frame}{Case: \textit{Sus scrofa} - wild boar}
+	\begin{alertblock}{Wild-life and invasive species monitoring}
+Wild boars spread quickly. They destroy plantations and river springs.
+	\end{alertblock}
+
+  \begin{tabular}{cc}
+    \includegraphics[scale=.25]{Images/javali.pdf} &  \includegraphics[scale=.24]{Images/plantacaoDestruida.pdf}  \\
+  \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Case: \textit{Sus scrofa} - wild boar}
+  \begin{block}{Challenge}
+    Wild boar is similar to \textit{cateto}, a native animal.\\
+We need to identify them with great accuracy.
+	\end{block}
+
+
+    \centering
+  \begin{tabular}{cc}
+    \includegraphics[scale=.2]{Images/javali.pdf} & \includegraphics[scale=1.15]{Images/cateto.pdf} \\
+     wild boar & \textit{cateto}
+  \end{tabular}
+
+\end{frame}
+
+\begin{frame}{Case: \textit{Sus scrofa} - wild boar}
+	\begin{exampleblock}{Opportunities}
+    \begin{itemize}
+      \item To learn from highly noisy and heterogeneous infrared images with deep learning 
+      \item To use aereal images to detect trails left by boars and destruction of river springs.
+      \item To create low-cost equipment to leave many days in forests to record sound, smells and images
+    \end{itemize}
+	\end{exampleblock}
+
+  \begin{alertblock}{Ongoing work}
+    \begin{itemize}
+      \item Development of careful data augmentation techniques
+      \item Transfer learning with deep learning
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+
+
+
+
+\begin{frame}[focus]
+Thanks for listening!
+  Any questions, please contact me at \textbf{albertini@ufu.br}
+\end{frame}
+
+%%----------------------------------------------------------------------------------------
+%%	 CLOSING/SUPPLEMENTARY SLIDES
+%%----------------------------------------------------------------------------------------
+%
+%\appendix
+%
+%\begin{frame}{References}
+%	\nocite{*} % Display all references regardless of if they were cited
+%	\bibliography{example.bib}
+%	\bibliographystyle{plain}
+%\end{frame}
+%
+%%------------------------------------------------
+%
+%\begin{frame}{Backup Slide}
+%	This is a backup slide, useful to include additional materials to answer questions from the audience.
+%	\vfill
+%	The package \texttt{appendixnumberbeamer} is used to refrain from numbering appendix slides.
+%\end{frame}
+%
+%%----------------------------------------------------------------------------------------
+%
+\end{document}
